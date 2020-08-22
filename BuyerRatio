@@ -1,0 +1,30 @@
+buyer <- read.csv("C:/Users/HARSHAL PATIL/Downloads/BuyerRatio.csv")
+summary(buyer)
+
+###nornality test###
+
+attach(buyer)
+
+shapiro.test(Males)     ##(p=0.34 > 0.05 so we accept null hypothesis)##
+
+shapiro.test(Females)   ##(p=0.54> 0.05 so we accet null hypothesis)##
+
+
+##varians test##
+
+var.test(Males,Females)   ##(p=0.0023< 0.05)
+
+
+##chi sqare test##
+
+chisq.test(Males,Females)   ##(p=021 > 0.05 so we accept null hypothesis)## 
+ 
+##this is equal means##
+
+
+
+
+
+
+
+
