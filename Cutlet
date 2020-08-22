@@ -1,0 +1,33 @@
+cutlet <- read.csv("C:/Users/HARSHAL PATIL/Downloads/Cutlets.csv")
+ 
+summary (cutlet)
+
+attach(cutlet)
+
+##narmally test ###
+##adderson and darling test##
+
+library(nortest)
+
+ad.test(Unit.A) ## p=0.28 > 0.05 
+ad.test(Unit.B) ## p=0.68 > 0.05
+
+### variance test ##
+ 
+var.test(Unit.A,Unit.B)  ## p= 0.31 > 0.05 
+
+### t test for two tail ###
+
+t.test(Unit.A,Unit.B,alternative = "two.sided",conf.level = 0.95)  ##p=0.47 > 0.05 
+
+###chi square ###
+
+chisq.test(Unit.A,Unit.B)   ##p=0.23 > 0.05 
+
+## there is no significant difrence in dimeter of cutlet #
+ 
+
+
+
+
+
