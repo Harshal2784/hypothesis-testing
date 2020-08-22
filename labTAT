@@ -1,0 +1,22 @@
+labtat<-read.csv("C:/Users/HARSHAL PATIL/Downloads/labTAT.csv")
+ summary(labtat)
+attach(labtat) 
+
+###normality test ###
+ ##adderson and darling test##
+ 
+ library(nortest)
+ 
+ ad.test(Laboratory.1) ## p=0.53 > 0.05
+ad.test(Laboratory.2)  ## p=0.73 > 0.05
+ad.test(Laboratory.3)  ## p=0.57 > 0.05
+ad.test(Laboratory.4)  ## p=0.41 > 0.05
+
+
+### variance test ##
+
+var.test(Laboratory.1,Laboratory.2)   ## p= 0.16 > 0.05
+var.test(Laboratory.3,Laboratory.4)   ## p= 0.31 > 0.05
+
+
+
